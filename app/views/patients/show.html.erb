@@ -1,0 +1,18 @@
+<h2>Patient: <%= @patient.name %></h2>
+<h2>Age: <%= @patient.age %></h2>
+
+<% @patient.appointments.each do |appointment| %>
+    Doctor: <%= link_to appointment.doctor.name, doctor_path(appointment.doctor) %></br>
+    Date: <%= appointment.appointment_datetime.to_formatted_s(:long).split(" ").insert(3, "at").join(" ") %>
+        </br></br>
+<% end %>
+
+
+
+
+
+
+<% # @patient.appointments.first.appointment_datetime %>
+<% # @patient.appointments.first.doctor.name %>
+
+

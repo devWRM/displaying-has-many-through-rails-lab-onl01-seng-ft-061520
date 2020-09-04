@@ -1,0 +1,10 @@
+
+<h2>Appointment Show Page</h2>
+
+Dr. <%= link_to @appointment.doctor.name, doctor_path(@appointment.doctor) %></br>
+Patient: <%= link_to @appointment.patient.name, patient_path(@appointment.patient) %></br>
+Date: <%= @appointment.appointment_datetime.to_formatted_s(:long) %>
+
+
+
+
